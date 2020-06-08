@@ -4,7 +4,9 @@
 		{
 			"path": "pages/home/home",
 			"style": {
-				"navigationBarTitleText": "首页"
+				"app-plus":{
+					"titleNView":false
+				}
 			}
 		}, {
 			"path": "pages/home/goodsList",

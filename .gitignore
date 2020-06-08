@@ -1,0 +1,7 @@
+node_modules/
+unpackage/
+.vscode/
+.idea
+.DS_Store
+manifest.json
+/utils/config.js

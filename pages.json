@@ -1,0 +1,28 @@
+{
+	"pages": [
+		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		}, {
+			"path": "pages/home/goodsList",
+			"style": {}
+		}, {
+			"path": "pages/home/detail",
+			"style": {}
+		}, {
+			"path": "pages/home/article-detail",
+			"style": {}
+		}
+	],
+	"globalStyle": {
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"navigationBarTitleText": "企业站",
+		// "navigationStyle": "custom",
+		"navigationBarTextStyle": "black"
+	},
+	"usingComponts": true
+
+}

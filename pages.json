@@ -4,8 +4,9 @@
 		{
 			"path": "pages/home/home",
 			"style": {
-				"app-plus":{
-					"titleNView":false
+				"app-plus": {
+					"titleNView": false
+					// "disableScroll":true
 				}
 			}
 		}, {
@@ -17,7 +18,13 @@
 		}, {
 			"path": "pages/home/article-detail",
 			"style": {}
+		}, {
+			"path": "pages/pay/pay",
+			"style": {
+				"navigationBarTitleText": "支付输入"
+			}
 		}
+
 	],
 	"globalStyle": {
 		"navigationBarBackgroundColor": "#FFFFFF",

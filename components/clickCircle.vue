@@ -13,7 +13,7 @@
 				ainimaChoose:''
 			};
 		},
-		created() {
+		mounted() {
 			if(Math.random() >= 0.5) {
 				this.ainimaChoose = 'animation0'
 			} else{

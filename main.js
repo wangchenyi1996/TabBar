@@ -26,6 +26,8 @@ Vue.component('cu-page-contact',cuPageContact )
 Vue.component('cu-page-about',cuPageAbout)
 Vue.component('cu-page-news',cuPageNews)
 Vue.component('cu-loading',culoading)
+import keyWords from "@/components/input-pay.vue"
+Vue.component('key-words', keyWords)
 
 Vue.config.productionTip = false
 

@@ -28,6 +28,8 @@
 	@import "colorui/icon.css";
 	@import "./colorui/animation.css";
 	@import "./iconfont/iconfont.css";
+	/*自定义全局样式 */
+	@import "./common/style/flex.css";
 
 	.nav-list {
 		display: flex;

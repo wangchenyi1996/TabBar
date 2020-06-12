@@ -29,7 +29,9 @@
 					还原
 				</button>
 				
-				
+				<button style="margin-bottom: 20upx;" class="cu-btn bg-cyan text-white margin-lr-xs" @tap="uploadImage">
+					上传图片页面
+				</button>
 				
 			</view>
 			
@@ -83,11 +85,6 @@
 				articles:'articles'
 			})
 		},
-		data() {
-			return {
-				
-			};
-		},
 		methods:{
 			setTabbar1(){
 				this.$store.commit("SET_TABBAR",[tabList[0],tabList[2],tabList[4]])
@@ -97,7 +94,14 @@
 			},
 			setTabbar3(){
 				this.$store.commit("SET_TABBAR",tabList)
+			},
+			// 上传图片
+			uploadImage(){
+				uni.navigateTo({
+					url:'/pages/upload/upload'
+				})
 			}
+			
 		}
 	}
 </script>

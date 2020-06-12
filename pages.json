@@ -1,6 +1,5 @@
 {
 	"pages": [
-		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
 			"path": "pages/home/home",
 			"style": {
@@ -9,19 +8,17 @@
 					// "disableScroll":true
 				}
 			}
-		}, {
-			"path": "pages/home/goodsList",
-			"style": {}
-		}, {
-			"path": "pages/home/detail",
-			"style": {}
-		}, {
-			"path": "pages/home/article-detail",
-			"style": {}
-		}, {
+		},
+		{
 			"path": "pages/pay/pay",
 			"style": {
 				"navigationBarTitleText": "支付输入"
+			}
+		},
+		{
+			"path": "pages/upload/upload",
+			"style": {
+				"navigationBarTitleText": "上传图片"
 			}
 		}
 

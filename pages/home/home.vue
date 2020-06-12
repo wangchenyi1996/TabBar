@@ -72,7 +72,6 @@
 			},
 			// 初始化内容区域的高度
 			async init_page_size() {
-				console.log("init_page_size")
 				this.$nextTick(async () => {
 					let sysInfo = uni.getSystemInfoSync();
 					const query = uni.createSelectorQuery().in(this);

@@ -47,6 +47,8 @@
 				</template>
 			</view>
 		</view>
+		<!-- 图片压缩 -->
+		<compress ref="compress" :maxwh="maxwh" :quality="quality" @changes="changeCompress"> </compress>
 	</view>
 </template>
 
@@ -56,6 +58,7 @@
 	} from '../../util/base64IMG.js'
 	import { Decimal } from '../../util/decimal/decimal.js';
 	import Process from '@/components/upload-imgs/progress.vue'
+	import compress from "@/components/upload-imgs/compress.vue"
 	export default {
 		data() {
 			return {
@@ -66,11 +69,15 @@
 				intervalId:null,
 				showLoad:true,
 				progress:[],
-				keys:0
+				keys:0,
+				// 压缩图片相关
+				imgs:[],
+				maxwh: 200,
+				quality: 0.5,
 			}
 		},
 		components: {
-			Process
+			Process,compress
 		},
 		props: {
 			isDel: {
@@ -167,6 +174,15 @@
 					sourceType: ['album', 'camera '], //从相册选择
 					success: res => {
 						this.imageURL = this.imageURL.concat(res.tempFilePaths);
+						this.$refs.compress.yasuoImg(this.imageURL).then(e => {
+							this.imgs = e.map((value, index) => {
+								return {
+									uri: value.path,
+									base64: value.tempFilePath
+								}
+							})
+							this.$emit('getUPImg', this.imgs);
+						})
 						if(res.tempFilePaths.length===1){
 							// 每次上传一张图片
 							this.progress = this.progress.concat(this.keys)
@@ -191,17 +207,16 @@
 								// console.log('percent:',this.percent);
 							}
 						},100)
-						uni.showLoading({
-							title: '上传中...',
-							mask: true
-						});
-						this.$emit('getUPImg', this.imageURL)
-						uni.hideLoading()
+						// this.$emit('getUPImg', this.imageURL)
 					}
 				});
 				this.keys++
 			},
-
+			
+			changeCompress(img){
+				console.log(img[0].tempFilePath);
+				console.log(img[0].path);
+			},
 			//预览图片
 			previewImage(e) {
 				var current = e.target.dataset.src

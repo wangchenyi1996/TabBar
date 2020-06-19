@@ -1,84 +1,35 @@
 <template>
-	<view>
-		我是产品中心页面
+	<view class="wrap">
+		<view class="item" v-for="i in 11" :key="i">
+			<view class="image">flex 布局最后一行问题</view>
+		</view>
 	</view>
 </template>
 
 <script>
-	import {
-		mapState
-	} from "vuex";
-	 
-	export default {
-		data() {
-			return {
-				TabCur: 0,
-			};
-		},
-		components: {},
-		computed: {
-			...mapState({
-				themeColor: 'themeColor',
-				textColor: 'textColor',
-				descTextColor: "descTextColor",
-				bannerDotColor: 'bannerDotColor',
-				bannerDotActiveColor: "bannerDotActiveColor",
-				articles: 'articles'
-			})
-		},
-		methods: {
-			cardSwiper(e) {
-				this.cardCur = e.detail.current
-			},
-			tabSelect(e) {
-				this.TabCur = e.currentTarget.dataset.id;
-				this.scrollLeft = (e.currentTarget.dataset.id - 1) * 60;
-				uni.showToast({
-					title:`切换到了 TAB${this.TabCur}`,
-					icon:'none'
-				})
-			},
-			jump_detail(id){
-				uni.navigateTo({
-					url:'../home/detail?id='+id
-				})
-			},
-			 
-			
-		},
-		mounted() {
-			console.log('mounted')
-			
-		}
-	}
+	
 </script>
-
-<style lang="less">
- 
-	.nav {
-		.cu-item {
-			 
-			.tab-text{
-				height: 43px;
-			}
-			.tab-bottom-line {
-				width: 0%;
-				height: 2px;
-				background-color: #0081FF;
-				transition-duration: 0.3s;
-			}
-			.tab-bottom-line-box{
-				display: flex;
-				justify-content: center;
-			}
+<style lang="scss">
+$padding: 20rpx;
+.wrap{
+	height: 100%;
+	width: 100%;
+	background-color: green;
+	
+	padding: $padding;
+	display: flex;
+	flex-wrap: wrap;
+	.item{
+		width: 33.33%;
+		display: flex;
+		margin-bottom: 30rpx;
+		padding: 0 $padding;
+		.image{
+			height: 200rpx;
+			width: 100%;
+			background-color: red;
+			color: #FFFFFF;
 		}
-		.cu-item.current{
-			.tab-bottom-line {
-				width: 100%;
-			 
-			}
-		}
-
-		
 	}
+}
 </style>

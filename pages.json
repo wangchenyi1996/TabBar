@@ -20,6 +20,12 @@
 			"style": {
 				"navigationBarTitleText": "上传图片"
 			}
+		},
+		{
+			"path": "pages/search/search",
+			"style": {
+				"navigationBarTitleText": "搜索高亮关键词"
+			}
 		}
 
 	],

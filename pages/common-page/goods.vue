@@ -4,7 +4,6 @@
 		<view class="wrap">
 			<view class="item" v-for="i in images" :key="i">
 				<image class="image" :src="i" mode="widthFix" />
-				
 			</view>
 		</view>
 	</view>

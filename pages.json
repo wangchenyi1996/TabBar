@@ -43,6 +43,12 @@
 			"style": {
 				"navigationBarTitleText": "搜索高亮关键词"
 			}
+		},
+		{
+			"path": "pages/webview/webview",
+			"style": {
+				"navigationBarTitleText": "webview"
+			}
 		}
 
 	],

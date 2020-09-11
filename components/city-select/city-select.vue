@@ -2,20 +2,26 @@
 	<!-- 城市选择-->
 	<view class="city-select">
 		<scroll-view :scroll-top="scrollTop" scroll-y="true" class="city-select-main" id="city-select-main" :scroll-into-view="toView">
+			<!-- 自定义内容 -->
+			<view style="margin-bottom:30px">
+				<view v-for="(item,index) in 6" :key="index">
+					第{{index+1}}项
+				</view>
+			</view>
 			<!-- 预留搜索-->
 			<view class="city-serach" v-if="isSearch"><input @input="keyInput" :placeholder="placeholder" class="city-serach-input" /></view>
 			<!-- 当前定位城市 -->
-			<!-- <view class="hot-title" v-if="activeCity && !serachCity">当前定位城市</view>
+			<view class="hot-title" v-if="activeCity && !serachCity">当前定位城市</view>
 			<view class="hot-city" v-if="activeCity && !serachCity">
 				<view class="hot-item" @click="cityTrigger(activeCity)">{{ activeCity[formatName] }}</view>
-			</view> -->
+			</view>
 			<!-- 热门城市 -->
-			<!-- <view class="hot-title" v-if="hotCity.length > 0 && !serachCity">热门城市</view>
+			<view class="hot-title" v-if="hotCity.length > 0 && !serachCity">热门城市</view>
 			<view class="hot-city" v-if="hotCity.length > 0 && !serachCity">
 				<template v-for="(item, index) in hotCity">
 					<view :key="index" @click="cityTrigger(item, 'hot')" class="hot-item">{{ item[formatName] }}</view>
 				</template>
-			</view> -->
+			</view>
 			<!-- 城市列表(搜索前) -->
 			<view class="citys" v-if="!serachCity">
 				<view v-for="(city, index) in sortItems" :key="index" v-show="city.isCity" class="citys-row">

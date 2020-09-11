@@ -1,10 +1,5 @@
 <template>
 	<view>
-		<!-- <view style="margin-bottom:30px">
-			<view v-for="(item,index) in 6" :key="index">
-				第{{index+1}}项
-			</view>
-		</view> -->
 		<city-select
 			placeholder="请输入联系人姓名"
 			@cityClick="cityClick"

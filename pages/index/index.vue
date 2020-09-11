@@ -2,6 +2,7 @@
 	<view>
 		<button type="default" @click="goPage('citys')">城市示例</button>
 		<button type="default" @click="goPage('address-list')">通讯录示例</button>
+		<button type="default" @click="goPage('webview')">webview</button>
 	</view>
 </template>
 
@@ -12,7 +13,6 @@ export default {
 	},
 	methods: {
 		goPage(str) {
-			console.log(`/pages/${str}/${str}`)
 			uni.navigateTo({
 				url: `/pages/${str}/${str}`
 			});

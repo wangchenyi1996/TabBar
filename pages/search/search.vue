@@ -44,8 +44,10 @@
 				for (let i = 0; i < arr.length; i++) {
 					if (arr[i].name.search(e) !== -1 || arr[i].email.search(e) !== -1) {
 						arr[i].imgurl = '../../static/images/img/' + arr[i].imgurl;
+						// 不加正则，只能匹配一个
 						arr[i].name = arr[i].name.replace(e, "<span style='color:#4AAAFF;'>" + e + "</span>");
-						arr[i].email = arr[i].email.replace(e, "<span style='color:#4AAAFF;'>" + e + "</span>");
+						// 加正则，可以匹配所有
+						arr[i].email = arr[i].email.replace(/e/gi, "<span style='color:#4AAAFF;'>" + e + "</span>");
 						this.userarr.push(arr[i]);
 					}
 				}

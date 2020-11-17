@@ -42,24 +42,13 @@
 			searchUser: function(e) {
 				let arr = datas.frineds();
 				for (let i = 0; i < arr.length; i++) {
-					if (arr[i].name.search(e) != -1 || arr[i].email.search(e) != -1) {
+					if (arr[i].name.search(e) !== -1 || arr[i].email.search(e) !== -1) {
 						arr[i].imgurl = '../../static/images/img/' + arr[i].imgurl;
 						arr[i].name = arr[i].name.replace(e, "<span style='color:#4AAAFF;'>" + e + "</span>");
 						arr[i].email = arr[i].email.replace(e, "<span style='color:#4AAAFF;'>" + e + "</span>");
 						this.userarr.push(arr[i]);
 					}
 				}
-				
-				// 处理搜索高亮
-				// let result = this.dataList.filter((item,index)=>{
-				// 	let temp = item.name.includes(this.inputVal)
-				// 	if(temp){
-				// 		let replace = `<span style="color:red;font-weight: bold;">${this.inputVal}</span>`
-				// 		item.name = item.name.replace(this.inputVal, replace)
-				// 		return item
-				// 	}
-				// })
-				
 			}
 		}
 	}

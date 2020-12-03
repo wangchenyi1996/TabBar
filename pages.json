@@ -49,9 +49,14 @@
 			"style": {
 				"navigationBarTitleText": "webview"
 			}
+		},
+		{
+			"path": "pages/luck/luck",
+			"style": {
+				"navigationBarTitleText": "抽奖"
+			}
 		}
-
-	],
+    ],
 	"globalStyle": {
 		"navigationBarBackgroundColor": "#FFFFFF",
 		"navigationBarTitleText": "企业站",

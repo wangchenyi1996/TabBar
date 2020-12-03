@@ -15,9 +15,15 @@ const store = new Vuex.Store({
 		descTextColor:"",
 		priceColor:"",
 		articles:[],
+		
 		showLoading:false,
+		netStatus: true,	// 网络状态
 	},
 	mutations: {
+		// 更新网络状态
+		setNetStatus(state, status) {
+			state.netStatus = status
+		},
 		SET_COLOR(state,colors){
 			// 主题色
 			state.themeColor = colors.themeColor

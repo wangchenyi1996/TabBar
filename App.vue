@@ -1,7 +1,6 @@
 <script>
-	import Vue from 'vue';
-	import ajax from 'lib/ajax.js';
 	import lib from './config/lib.js'
+	import ajax from './lib/ajax.js'
 	export default {
 		onLaunch: function() {
 			// 网路监听（用户目前断网，切换wifi）

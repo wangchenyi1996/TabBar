@@ -121,7 +121,7 @@
 			},
 			// 打开红包  => 查看钱包
 			lookbagbrn: function() {
-
+				
 			}
 		},
 		components: {

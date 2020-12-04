@@ -3,11 +3,8 @@ import App from './App'
 
 import store from "./store";
 import config from "@/config/config.js";
-import ajax from "@/lib/ajax.js";
-// import uploader from "@/lib/uploader.js"
+
 Vue.prototype.$store = store;
-Vue.prototype.$ajax = ajax;
-// Vue.prototype.$uploader = uploader;
 
 Vue.use(config);//全局可 通过 this.$config 访问 配置
 
@@ -19,6 +16,7 @@ import cuPageContact from "@/pages/common-page/contact.vue";
 import cuPageAbout from "@/pages/common-page/about.vue";
 import cuPageNews from "@/pages/common-page/news.vue";
 import culoading from "@/components/loading/loading.vue";
+import keyWords from "@/components/input-pay.vue"
 Vue.component('cu-custom',cuCustom)
 Vue.component('cu-page-index',cuPageIndex)
 Vue.component('cu-page-goods',cuPageGoods)
@@ -26,7 +24,6 @@ Vue.component('cu-page-contact',cuPageContact )
 Vue.component('cu-page-about',cuPageAbout)
 Vue.component('cu-page-news',cuPageNews)
 Vue.component('cu-loading',culoading)
-import keyWords from "@/components/input-pay.vue"
 Vue.component('key-words', keyWords)
 
 Vue.config.productionTip = false

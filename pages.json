@@ -22,7 +22,6 @@
 			"style": {
 				"app-plus": {
 					"titleNView": false
-					// "disableScroll":true
 				}
 			}
 		},
@@ -55,7 +54,41 @@
 			"style": {
 				"navigationBarTitleText": "抽奖"
 			}
+		},
+		{
+		    "path" : "pages/reg/reg",
+		    "style": {
+		    	"navigationBarTitleText":"滑动验证"
+		    }
+		},
+		{
+		    "path" : "pages/card/card",
+		    "style": {
+		    	"navigationBarTitleText":"卡片滑动"
+		    }
+		},
+		{
+		    "path" : "pages/swiper/swiper",
+		    "style": {
+		    	"navigationBarTitleText": "滚动渐变的顶部导航栏",
+		    	"navigationStyle":"custom"
+		    }
+		},
+		{
+			"path": "pages/red_bag/red_bag",
+			"style": {
+				"navigationBarTitleText": "发红包"
+			}
 		}
+        ,{
+            "path" : "pages/muti-word/muti-word",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "多行文字展开和收起",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarBackgroundColor": "#FFFFFF",
